@@ -1,0 +1,53 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="inz.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="GRA TERENOWA" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Rejestracja" Margin="9,-7,0,20" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <StackPanel Grid.Row="0" Margin="0,30,0,0">
+                <TextBlock FontSize="40">Login</TextBlock>
+                <TextBox x:Name="regName" Height="70"/>
+            </StackPanel>
+            <StackPanel  Grid.Row="1">
+                <TextBlock FontSize="40">Hasło</TextBlock>
+                <PasswordBox x:Name="regPass"  Height="70"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                <TextBlock FontSize="40">Potwierdź hasło</TextBlock>
+                <PasswordBox x:Name="regCPass"  Height="70"/>
+            </StackPanel>
+            <StackPanel Grid.Row="3">
+                <TextBlock FontSize="40">E-mail</TextBlock>
+                <TextBox x:Name="regEmail" Height="70"/>
+            </StackPanel>
+            <Button x:Name="btnRegister" Click="btnRegister_Click" Grid.Row="4" Width="250" FontSize="22" Height="85" Margin="109,0">Zarejestruj się</Button>
+
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
